@@ -2,6 +2,7 @@ package main
 
 import (
 	"os"
+
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
@@ -28,7 +29,7 @@ func main() {
 		if update.Message == nil {
 			continue
 		}
-
+		// testing git push
 		file := tgbotapi.FileURL("img2.joyreactor.cc/pics/post/гифки-живность-котэ-рыба-7158036.gif")
 		gifMsg := tgbotapi.NewVideo(update.Message.Chat.ID, file)
 		gifMsg.ReplyMarkup = animalsKeyboard
