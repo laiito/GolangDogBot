@@ -14,7 +14,6 @@ var animalsKeyboard = tgbotapi.NewReplyKeyboard(
 
 func main() {
 	botToken := os.Getenv("BOT_TOKEN")
-	//botToken := "1480841452:AAGm822jLcTtoumuz5Frx6T6yGrtf1NUfzw"
 	bot, err := tgbotapi.NewBotAPI(botToken)
 	if err != nil {
 		panic(err)
@@ -29,7 +28,7 @@ func main() {
 		if update.Message == nil {
 			continue
 		}
-		// testing git push
+
 		file := tgbotapi.FileURL("img2.joyreactor.cc/pics/post/гифки-живность-котэ-рыба-7158036.gif")
 		gifMsg := tgbotapi.NewVideo(update.Message.Chat.ID, file)
 		gifMsg.ReplyMarkup = animalsKeyboard
