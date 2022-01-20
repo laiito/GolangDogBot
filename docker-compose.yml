@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  golangdogbot:
+    container_name: golangdogbot
+    build:
+      context: .
+    env_file:
+      - ".env"
